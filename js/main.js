@@ -1,18 +1,19 @@
 const menuBtn = document.querySelector('.menu__icon')
 const menu = document.querySelector('.header__list')
-const menuAccaunt = document.querySelector('.header_accaunt')
+const menuAccaunt = document.querySelector('.header__accaunt')
 
-if (menuBtn && menu) {
+if (menuBtn && menu && menuAccaunt) {
 	menuBtn.addEventListener('click', () => {
 		menuBtn.classList.toggle('active')
 		menu.classList.toggle('active')
 		menuAccaunt.classList.toggle('active')
 	})
+
 	menu.querySelectorAll('a').forEach(link => {
 		link.addEventListener('click', () => {
+			menuAccaunt.classList.toggle('active')
 			menuBtn.classList.toggle('active')
 			menu.classList.toggle('active')
-			menuAccaunt.classList.toggle('active')
 		})
 	})
 }

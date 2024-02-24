@@ -55,6 +55,7 @@
 		top: 0;
 		left: 0;
 		padding: 5px;
+		z-index: 0;
 		background-color: var(--color-bg);
 		width: 100%;
 		height: 100vh;
@@ -70,12 +71,14 @@
 		font-size: 25px;
 	}
 
-	.header_accaunt {
+	.header__accaunt {
 		position: absolute;
-		top: 10px;
+		z-index: 0;
+		top: 400px;
+		bottom: 0;
 		left: 0;
 		width: 100%;
-		height: 100vh;
+		height: 50px;
 		align-items: center;
 		justify-content: center;
 		padding-top: 50px;
