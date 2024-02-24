@@ -1,6 +1,21 @@
 const menuBtn = document.querySelector('.menu__icon')
 const menu = document.querySelector('.header__list')
-const menuAccaunt = document.querySelector('header_accaunt')
+const menuAccaunt = document.querySelector('.header_accaunt')
+
+if (menuBtn && menu) {
+	menuBtn.addEventListener('click', () => {
+		menuBtn.classList.toggle('active')
+		menu.classList.toggle('active')
+		menuAccaunt.classList.toggle('active')
+	})
+	menu.querySelectorAll('a').forEach(link => {
+		link.addEventListener('click', () => {
+			menuBtn.classList.toggle('active')
+			menu.classList.toggle('active')
+			menuAccaunt.classList.toggle('active')
+		})
+	})
+}
 
 const anchors = document.querySelectorAll('a[href*="#"]')
 
@@ -14,19 +29,6 @@ anchors.forEach(anchor => {
 		})
 	})
 })
-
-if (menuBtn && menu) {
-	menuBtn.addEventListener('click', () => {
-		menuBtn.classList.toggle('active')
-		menu.classList.toggle('active')
-	})
-	menu.querySelectorAll('a').forEach(link => {
-		link.addEventListener('click', () => {
-			menuBtn.classList.toggle('active')
-			menu.classList.toggle('active')
-		})
-	})
-}
 
 const myslider = new Splide('.splide', {
 	perPage: 4,

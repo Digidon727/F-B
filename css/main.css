@@ -54,9 +54,6 @@ body {
 	margin-right: 125px;
 }
 
-.header_accaunt {
-	margin-left: auto;
-}
 .header__list {
 	display: flex;
 	gap: 64px;
@@ -83,6 +80,7 @@ body {
 }
 .header_accaunt {
 	display: flex;
+	margin-left: auto;
 	gap: 64px;
 }
 
